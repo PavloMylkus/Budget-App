@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '../Modal';
 
 const Statistics = () => {
-	return (
+	const [openModal, setOpenModal] = useState(false)
+
+	return (<>
 		<h1>Statistics page</h1>
+
+		<button onClick={() => setOpenModal(true)}>Open</button>
+
+		<Modal open={openModal} onClose={() => setOpenModal(false)}>
+			<div>i am portal</div>
+			<button onClick={() => setOpenModal(false)}>Close</button>
+		</Modal>
+	</>
+
 	);
 }
 
