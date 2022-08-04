@@ -98,5 +98,5 @@ export {
 	addItem,
 	getItems,
 	deleteItem,
-	updateItem
+	updateItem,
 }
