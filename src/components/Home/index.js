@@ -7,10 +7,11 @@ import { STATUES } from '../../constants';
 import { useData } from '../../hooks';
 import { deleteItem } from '../../utils/indexdb';
 import ChangeBalance from '../ChangeBalance';
+import BalanceData from '../BalanceData';
 
 const Home = () => {
 
-	const [balance, setBalance] = useState(0);
+	// const [balance, setBalance] = useState(0);
 
 
 	const { transactions, status, pushTransaction, onDelete, onStarClick } = useData();
@@ -20,7 +21,7 @@ const Home = () => {
 	const onChange = (transaction) => {
 		pushTransaction(transaction)
 
-		setBalance(balance + Number(transaction.value))
+		// setBalance(balance + Number(transaction.value))
 
 	}
 
@@ -28,7 +29,10 @@ const Home = () => {
 	return (
 		<ErrorBoundary>
 			<Wrapper>
-				<Balance balance={balance} />
+				<BalanceData>
+					{(balance) => <Balance balance={balance} />}
+				</BalanceData>
+
 				<ChangeBalance onChange={onChange} />
 				<hr />
 

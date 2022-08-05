@@ -35,10 +35,10 @@ const Settings = () => {
 		saveToStorage('locale', value)
 	}
 
-	const data = useMemo(() => [2], []);
+
 	return (<>
 		<h1>Налаштування</h1>
-		<Test data={data} />
+
 		<div>
 			<form>
 				<div>

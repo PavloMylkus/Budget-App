@@ -1,5 +1,5 @@
 import React, { memo, useMemo, useState } from 'react';
-
+import withProfiler from '../HOCs/withProfiler';
 
 const list = new Array(20).fill(0).map(() => `item - ${Math.random()}`)
 
@@ -37,4 +37,4 @@ const Statistics = () => {
 	);
 }
 
-export default Statistics;
+export default withProfiler(Statistics, 'Statistics');
