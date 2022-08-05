@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {
 	BrowserRouter,
 	Routes,
@@ -45,14 +45,17 @@ class App extends React.Component {
 				<GlobalStyle />
 				<Wrapper>
 					<Header />
-					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='statistics' element={<Statistics />} />
-						<Route path='settings' element={<Settings />} />
-						<Route path='about' element={<About />} />
+					<Suspense fallback={<div>Loading...</div>}>
+						<Routes>
+							<Route path='/' element={<Home />} />
+							<Route path='statistics' element={<Statistics />} />
+							<Route path='settings' element={<Settings />} />
+							<Route path='about' element={<About />} />
 
 
-					</Routes>
+						</Routes>
+					</Suspense>
+
 				</Wrapper>
 
 			</BrowserRouter>
