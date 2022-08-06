@@ -35,4 +35,18 @@ img{
 	margin-right:10px;
 }
 `;
+export const DeleteBtn = styled.button`
+	border-radius: 4px;
+	border: 0;
+	/* font-weight:300; */
+	font-size:26px;
+	cursor: pointer;
+	transition: all .2s;
+	color: ${({ theme }) => theme.color};
+	background-color:${({ theme }) => theme.background};
+	&:hover{
+		background-color: gray;
+	}
+`;
+Comment.displayName = 'DeleteBtn'
 Icon.displayName = 'Icon';

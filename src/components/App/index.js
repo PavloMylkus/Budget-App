@@ -8,13 +8,11 @@ import { IntlAppProvider } from '../../providers/i18n/provider';
 export default () => {
 	const { state, dispatch } = useContext(AppContext)
 
-	const onRender = (...data) => {
-		console.log(data)
-	}
+
 	return (
 		<ThemeProvider theme={getTheme(state.themeName)}>
 			<IntlAppProvider>
-				<Profiler id='app' onRender={onRender}>
+				<Profiler id='app'>
 					<App />
 				</Profiler>
 			</IntlAppProvider>

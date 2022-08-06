@@ -7,13 +7,10 @@ function withProfiler(WrappedComponent, id = '') {
 			super(props);
 
 		}
-		onRender = (...data) => {
-			console.log(`ID ${id}, Data:`, data);
 
-		}
 		render() {
 			return (
-				<Profiler id='app' onRender={this.onRender}>
+				<Profiler id='app' >
 					<WrappedComponent {...this.props} />
 				</Profiler>
 			)

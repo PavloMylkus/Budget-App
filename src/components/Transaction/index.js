@@ -2,7 +2,7 @@ import React, { useCallback, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import { AppContext } from '../../providers/context';
-import { Wrapper, TransactionDate, Value, Comment, Icon } from './styles';
+import { Wrapper, TransactionDate, Value, Comment, Icon, DeleteBtn } from './styles';
 import StarFil from '../../assets/img/starf.svg';
 import Star from '../../assets/img/star.svg';
 
@@ -20,7 +20,7 @@ const Transaction = ({ transaction: { id, value, date, comment, isStarred }, onD
 			<TransactionDate>{date}</TransactionDate>
 			<Value>{value.toFixed(2)}, {state.currency}</Value>
 			<Comment>{comment}</Comment>
-			<button onClick={deleteItem}>Delete</button>
+			<DeleteBtn onClick={deleteItem}>X</DeleteBtn>
 		</Wrapper>
 	);
 }

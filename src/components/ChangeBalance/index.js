@@ -7,12 +7,12 @@ const Button = styled.button`
 	position: fixed;
 	right: 50px;
 	bottom: 50px;
-	width: 50px;
-	height: 50px;
-	font-size: 42px;
+	width: 75px;
+	height: 75px;
+	font-size: 52px;
 	color: gray;
 	background-color:#fff;
-	border-radius:25px ;
+	border-radius:50% ;
 	border: 2px solid gray;
 	display: flex;
 	outline: none;
