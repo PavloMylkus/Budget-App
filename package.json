@@ -2,7 +2,10 @@
 	"name": "budget",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://pavlomylkus.github.io/Budget-App/",
+	"homepage": "https://pavlomylkus.github.io/budget-app/",
+	"engines": {
+		"node": "16.14.2"
+	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.11.4",
 		"@testing-library/react": "^11.1.0",
